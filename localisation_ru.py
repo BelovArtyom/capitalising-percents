@@ -1,4 +1,4 @@
-# localisation for Complex percent calculator program
+# localisation for compounding percent calculator program
 
 incorrectinput = "ОШИБКА: Ввод неверен, пожалуйста, попробуйте ещё раз."
 
