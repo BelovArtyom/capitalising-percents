@@ -18,8 +18,9 @@ while preferred_localisation == None:
 	elif preferred_localisation == 'J':
 		import localisation_jp as l
 	# Else catches all other inputs, resetting while cycle
-	else: preferred_localisation = None
-
+	else:
+		print(l.incorrectinput)
+		preferred_localisation = None
 
 # Taking initial inputs from user
 years = None
@@ -30,8 +31,9 @@ while years == None:
 		if years <= 0:
 		print(l.incorrectinput)
 		years = None
-	except: print(l.incorrectinput)
-
+	except:
+		print(l.incorrectinput)
+		years = None
 
 initial_capital = None
 while initial_capital == None:
@@ -42,8 +44,9 @@ while initial_capital == None:
 		if initial_capital <= 0:
 		print(l.incorrectinput)
 		initial_capital = None
-	except: print(l.incorrectinput)
-	
+	except:
+		print(l.incorrectinput)
+		initial_capital = None	
 
 percent = None
 while percent == None:
@@ -54,7 +57,9 @@ while percent == None:
 		if percent <= 0:
 		print(l.incorrectinput)
 		percent = None
-	except: print(l.incorrectinput)
+	except:
+		print(l.incorrectinput)
+		percent = None
 
 investment_infusion = None
 while investment_infusion == None:
@@ -65,7 +70,9 @@ while investment_infusion == None:
 		if investment_infusion < 0:
 		print(l.incorrectinput)
 		investment_infusion = None
-	except: print(l.incorrectinput)
+	except:
+		print(l.incorrectinput)
+		investment_infusion = None
 
 # variables used: years, initial_capital, percent, investment_infusion
 # Outputs states for 1 year in and every 10th year and last year (?)
@@ -78,6 +85,7 @@ for year in range (1, years + 1):
     print ("|       |   основа   | сумма %  |         |")
     print ("| месяц | инвестиций | за месяц | капитал |")
     print ("-------------------------------------------")
-
+# inputs go:   ^7        ^12        ^10         ^9 characters and
+# are optimised for this kind of output length. Read localisation_ru.py
 
 
